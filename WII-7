@@ -1,0 +1,298 @@
+#include <stdbool.h> 
+#include <stdio.h>
+
+void Displayfunction(long button, char* messages[4]) 
+{
+    // button 1 and their combination
+    if(button == 1)
+    {
+        printf("%s\n",messages[1]); //move left (L)
+    }
+    
+    
+    
+    if(button == 12 || button == 21)
+    {
+        printf("%s\n",messages[4]); //move down (D)
+    } 
+    
+    if(button == 14 || button == 41)
+    {
+        printf("%s\n",messages[5]); // move up (U)
+    }
+    
+    if(button == 13 || button == 31)
+    {
+        printf("%s and %s simultaneously.\n",messages[2],messages[1]);  //rotate anticlockwise (ACW) & move left (L) simultaneously
+    }
+    
+     if(button == 123 || button == 132|| button == 213 || button == 231 || button == 312 || button == 321)
+    {
+        printf("%s and %s simultaneously.\n",messages[2],messages[4]);  //rotate anticlockwise (ACW) & move down (D) simultaneously
+    }
+    
+     if(button == 134 || button == 143|| button == 314 || button == 341 || button == 413 || button == 431)
+    {
+        printf("%s and %s simultaneously.\n",messages[2],messages[5]);  //rotate anticlockwise (ACW) & move up (U) simultaneously
+    }
+    
+    if(button == 124 || button == 142|| button == 214 || button == 241 || button == 412 || button == 421)
+    {
+        printf("%s and %s simultaneously.\n",messages[0],messages[4]);  //rotate clockwise (CW) & move down (D) simultaneously
+    }
+    
+    // button 2 and their combination
+    if(button == 2)
+    {
+        printf("%s\n",messages[2]); //rotate anti-clockwise (ACW)
+    }
+    
+    
+     if(button == 24 || button == 42)
+    {
+        printf("%s and %s simultaneously.\n",messages[0],messages[1]);  //rotate clockwise (CW) & move left (L) simultaneously
+    }
+    
+    if(button == 23 || button == 32)
+    {
+        printf("%s and %s simultaneously.\n",messages[2],messages[3]);  //rotate anti-clockwise (ACW) & move right (R) simultaneously
+    }
+      if(button == 234 || button == 243|| button == 324 || button == 342 || button == 423 || button == 432)
+    {
+        printf("%s and %s simultaneously.\n",messages[2],messages[5]);  //rotate clockwise (CW) & move up (U) simultaneously
+    }
+    
+     
+    
+    // button 3 and their combination
+    if(button == 3)
+    {
+        printf("%s\n",messages[3]); //move right (R)
+    }
+    
+    if(button == 34 || button == 43 )
+    {
+        printf("%s and %s simultaneously.\n",messages[0],messages[3]);  //rotate clockwise (CW) & move right (R) simultaneously 
+    }
+    
+    // button 4 and their combination
+    if(button == 4)
+    {
+        printf("%s\n",messages[0]);//rotate clockwise (CW).
+    }
+    
+    if(button == 0 || button ==1234 || button == 1243 || button == 1324 || button == 1342 || button == 1432 || button ==1423)
+    {
+        printf("nothing happen!!\n");
+    
+    }else if(button == 2134 || button == 2143 || button == 2314 || button == 2341 || button == 2431 || button == 2413)
+    {
+        printf("nothing happen!!\n");
+    
+    }else if(button == 3214 || button == 3241 || button == 3124 || button == 3142 || button == 3412 || button == 3421)
+    {
+        printf("nothing happen!!\n");
+    
+    }else if(button == 4231 || button == 4213 || button == 4321 || button == 4312 || button == 4132 || button == 4123)
+    {
+        printf("nothing happen!!\n");
+    
+    }
+    
+    
+    
+    
+    
+}
+/**
+ * 
+ */
+
+void DisplayGraphic(long button) 
+{
+    // button 1 and their combination
+    if(button == 1)
+    {
+        printf("   *\n");
+        printf("  **\n");
+        printf("**************\n");
+        printf("  **\n");
+        printf("   *\n");
+        //move left (L) arrow.
+    }
+    
+    
+    
+    if(button == 12 || button == 21)
+    {
+        printf("   *\n");
+        printf("   *\n");
+        printf("*******\n");
+        printf("  ***\n");
+        printf("   *\n");//move down arrow.
+    } 
+    
+    if(button == 14 || button == 41)
+    {
+        printf("   *\n");
+        printf("  ***\n");
+        printf("*******\n");
+        printf("   *\n");
+        printf("   *\n"); // move up (U) arrow.
+    }
+    
+    if(button == 13 || button == 31)
+    {
+        printf("  *********       *\n");
+        printf("  *       *      **\n ");
+        printf("*****   * *    *********\n");
+        printf(" ***    ***      **\n");
+        printf("  *               * \n");  //rotate anticlockwise (ACW) & move left (L) simultaneously arrows.
+    }
+    
+     if(button == 123 || button == 132|| button == 213 || button == 231 || button == 312 || button == 321)
+    {
+        printf("  *********       *\n ");
+        printf("  *       *       *\n ");
+        printf("*****   * *    *******\n");
+        printf(" ***    ***      ***\n");
+        printf("  *               *\n");
+          //rotate anticlockwise (ACW) & move down (D) simultaneously arrows.
+    }
+    
+     if(button == 134 || button == 143|| button == 314 || button == 341 || button == 413 || button == 431)
+    {
+        printf("  *********       *\n");
+        printf("  *       *      ***\n");
+        printf("*****   * *    *******\n");
+        printf(" ***    ***       *\n");
+        printf("  *               *\n");//rotate anticlockwise (ACW) & move up (U) simultaneously arrows.
+    }
+    
+    if(button == 124 || button == 142|| button == 214 || button == 241 || button == 412 || button == 421)
+    {
+        printf("  *********        *\n");
+        printf("  *       *        *\n");
+        printf("  *  *  *****   *******\n");
+        printf("  ****   ***      ***\n");
+        printf("          *        *\n");  //rotate clockwise (CW) & move down (D) simultaneously arrows.
+    }
+    
+    // button 2 and their combination
+    if(button == 2)
+    {
+        printf("  *********\n");
+        printf("  *       *\n");
+        printf("  *  *  *****\n");
+        printf("  ****   ***\n");
+        printf("          *\n");  //rotate anti-clockwise (ACW) arrow.
+    }
+    
+    
+     if(button == 24 || button == 42)
+    {
+        printf("  *********        *\n");
+        printf("  *       *       **\n");
+        printf("  *  *  *****   ***********\n");
+        printf("  ****   ***      **\n");
+        printf("          *        *\n");  //rotate clockwise (CW) & move left (L) simultaneously arrows.
+    }
+    
+    if(button == 23 || button == 32)
+    {
+        printf("  *********          *\n");
+        printf("  *       *          **\n");
+        printf("*****   * *    **********\n");
+        printf(" ***    ***          **\n");
+        printf("  *                  *\n");  //rotate anti-clockwise (ACW) & move right (R) simultaneously arrows.
+    }
+      if(button == 234 || button == 243|| button == 324 || button == 342 || button == 423 || button == 432)
+    {
+        printf("  *********        *\n");
+        printf("  *       *       ***\n");
+        printf("  *  *  *****   *******\n");
+        printf("  ****   ***       *\n");
+        printf("          *        *\n");  //rotate clockwise (CW) & move up (U) simultaneously arrows.
+    }
+    
+     
+    
+    // button 3 and their combination
+    if(button == 3)
+    {
+        printf("      *\n");
+        printf("      **\n");
+        printf("***********\n");
+        printf("      **\n");
+        printf("      *\n"); //move right (R) arrow.
+    } 
+    
+    if(button == 34 || button == 43 )
+    {
+        printf("  *********            *\n");
+        printf("  *       *            **\n");
+        printf("  *  *  *****     **********\n");
+        printf("  ****   ***           **\n");
+        printf("          *            *\n");   //rotate clockwise (CW) & move right (R) simultaneously arrows.
+    }
+    
+    // button 4 and their combination
+    if(button == 4)
+    {
+        printf("  *********\n");
+        printf("  *       *\n");
+        printf("  *  *  *****\n");
+        printf("  ****   ***\n");
+        printf("          *\n");//rotate clockwise (CW) arrows.
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+int main() {
+    
+    char* messages[6] = {"rotate clockwise(CW) ","move left (L)","rotate anti-clockwise (ACW)","move right (R)","move down (D)","move up (U)"};//array of six function in WII
+    
+   
+    long  button;//declare button value
+    
+    //setting window in console
+    
+    printf("Wi-I controller\n");
+    printf("please input only 1,2,3,4 or keyboard arrow(press -1 mean stop )\n");
+    printf("-----------------------------------------------------------------------\n");
+    printf("| !!Be Aware                                                          |\n");
+    printf("|1. Because this controller can play more than one time until you     |\n");
+    printf("|press (-1) to stop this program.                                     |\n");
+    printf("|2. if you press 0 which mean nothing happen same  you press all      |\n");
+    printf("|buttons(1234).                                                       |\n");
+    printf("|3. if you press 1 2 or other buttons which have same this pattern    |\n");
+    printf("|DOES MEAN  combination together if you want (1+2) means move up      |\n");
+    printf("|please type only 12 or 21 (without using space bar).                 |\n");
+    printf("|if we type 1 2 ,we mean we have 2 function like move left and ACW    |\n");
+    printf("-----------------------------------------------------------------------\n");
+    scanf("%ld", &button); //input number
+    
+    //we use -1 for stop button
+    //if button isn't equal -1
+    while(button > -1){
+        
+        
+    Displayfunction(button,messages);// calling  Displayfunction function
+    DisplayGraphic(button); // calling  DisplayGraphic function
+    
+    scanf("%ld", &button); //scan again until button is -1.
+    
+      
+   }
+    
+    return 0;
+}
